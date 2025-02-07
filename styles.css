@@ -1,0 +1,1731 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --text-color: #e4e6eb;
+    --bg-color: #18191a;
+    --card-bg: #242526;
+    --input-bg: #3a3b3c;
+    --border-color: #393a3b;
+    --hover-bg: #4e4f50;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+    --header-bg: #2d2e30;
+    --text-color-secondary: #b1b3b5;
+    --secondary-color-hover: #34c759;
+    --primary-color-hover: #3e8e41;
+    --modal-bg: #2d2e30;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: linear-gradient(to right, var(--header-bg), var(--modal-bg));
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.header .subtitle {
+    margin: 0.2rem 0 0.8rem;
+    font-size: 0.9rem;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.button:hover::before {
+    opacity: 1;
+}
+
+.button i {
+    font-size: 1.1rem;
+}
+
+.home-button {
+    background: var(--secondary-color);
+}
+
+.home-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2);
+}
+
+.screenshot-button {
+    background: var(--primary-color);
+}
+
+.screenshot-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+.calculate-button {
+    background: #9b59b6;
+}
+
+.calculate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(155, 89, 182, 0.2);
+}
+
+.settings-button {
+    background: #e67e22;
+}
+
+.settings-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.2);
+}
+
+.server-select {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--input-bg);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 120px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23e4e6eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    padding-right: 2.5rem;
+}
+
+.server-select:hover {
+    border-color: var(--primary-color);
+}
+
+.server-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.server-select option {
+    background: var(--modal-bg);
+    color: var(--text-color);
+    padding: 0.5rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.hospitals-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bottom-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.hospital-section {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: sectionAppear 0.5s ease forwards;
+}
+
+.hospital-section h3 {
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.8rem;
+    background: linear-gradient(to right, rgba(48, 105, 152, 0.7), rgba(48, 105, 152, 0.3));
+    border-radius: 12px 12px 0 0;
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hospital-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.service-line {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.service-line:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+}
+
+.service-line label {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+/* Стилизация чекбокса ночной смены */
+.night-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    margin-left: auto;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.night-checkbox-wrapper:hover {
+    transform: translateY(-2px);
+    background: rgba(46, 204, 113, 0.1);
+}
+
+.night-checkbox-wrapper input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.night-checkbox-wrapper input[type="checkbox"]:checked {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.night-checkbox-wrapper input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    animation: checkmark 0.2s ease-in-out;
+}
+
+.night-checkbox-wrapper label {
+    font-size: 0.85rem;
+    color: var(--text-color-secondary);
+    user-select: none;
+    cursor: pointer;
+}
+
+/* Анимация для ночной смены */
+.night-service {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    margin: 0.3rem 0;
+    padding: 0;
+    background: rgba(46, 204, 113, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(46, 204, 113, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+.night-service.visible {
+    visibility: visible;
+    opacity: 1;
+    max-height: 100px;
+    padding: 0.8rem;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Стили для содержимого ночной смены */
+.night-service .input-group {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+.night-service.visible .input-group {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.night-service label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-color-secondary);
+    margin-bottom: 0.4rem;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.night-service.visible label {
+    opacity: 0.9;
+    transform: translateY(0);
+}
+
+/* Анимация для галочки */
+@keyframes checkmark {
+    0% {
+        transform: rotate(45deg) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Анимация для появления ночной смены */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для инпута в ночной смене */
+.night-service .input-group input {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.night-service .input-group input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    min-width: 140px;
+}
+
+.input-group input {
+    width: 60px;
+    padding: 0.4rem;
+    text-align: center;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-group input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.15);
+}
+
+.input-group .points {
+    min-width: 70px;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    text-align: right;
+}
+
+.service-line:not(:has(.night-checkbox-wrapper)) {
+    grid-template-columns: 1fr auto;
+}
+
+.els-hospital h3 {
+    background: linear-gradient(to right, rgba(41, 128, 185, 0.7), rgba(41, 128, 185, 0.3));
+}
+
+.sandy-shores h3 {
+    background: linear-gradient(to right, rgba(230, 126, 34, 0.7), rgba(230, 126, 34, 0.3));
+}
+
+.paleto-bay h3 {
+    background: linear-gradient(to right, rgba(155, 89, 182, 0.7), rgba(155, 89, 182, 0.3));
+}
+
+.reanimation-section h3 {
+    background: linear-gradient(to right, rgba(231, 76, 60, 0.7), rgba(231, 76, 60, 0.3));
+}
+
+.instructor-section h3 {
+    background: linear-gradient(to right, rgba(46, 204, 113, 0.7), rgba(46, 204, 113, 0.3));
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.total span {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-left: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.total span[data-changed="true"] {
+    animation: pulse 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: var(--secondary-color);
+}
+
+@media (max-width: 1400px) {
+    .hospitals-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .hospitals-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .bottom-sections {
+        grid-template-columns: 1fr;
+    }
+}
+
+.reanimation-section {
+    background: linear-gradient(to bottom right, #242526, #2d2e30);
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.reanimation-section .services {
+    gap: 0.3rem;
+}
+
+.service {
+    background: var(--input-bg);
+    border-radius: 8px;
+    padding: 0.4rem;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.reanimation-section .service {
+    padding: 0.4rem;
+}
+
+.service:hover {
+    background: var(--hover-bg);
+}
+
+.grand-total {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #2d2e30, #1a1b1c);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.instructor-section {
+    background: linear-gradient(to bottom right, #242526, #2d2e30);
+    border-radius: var(--border-radius);
+    padding: 0.8rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    width: 100%;
+}
+
+.instructor-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+}
+
+.points {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    min-width: 65px;
+    text-align: right;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.points[data-changed="true"] {
+    animation: pointsUpdate 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: var(--secondary-color);
+}
+
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    width: 55px;
+    padding: 0.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.85rem;
+    background: var(--card-bg);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.service label,
+.night-service label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    background: linear-gradient(135deg, #1a1b1c, #2d2e30);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.copyright:hover {
+    opacity: 1;
+}
+
+.copyright a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.copyright a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Стилизация скроллбара */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--card-bg);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--hover-bg);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--border-color);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.3rem;
+}
+
+.nav-button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button i {
+    font-size: 1rem;
+}
+
+.nav-button.home {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.nav-button.upload {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: var(--modal-bg);
+    border-radius: 10px;
+    padding: 0.8rem;
+    max-width: 90%;
+    width: 350px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    display: none;
+}
+
+.modal.active {
+    opacity: 1;
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+.modal-header {
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.modal-header h3 i {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+.modal-body {
+    padding: 0.8rem;
+}
+
+.modal-body p {
+    margin: 0 0 0.4rem 0;
+    font-size: 0.85rem;
+}
+
+.link-container {
+    display: flex;
+    gap: 0.4rem;
+    background: var(--bg-color);
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.link-container input {
+    flex: 1;
+    padding: 0.4rem;
+    font-size: 0.85rem;
+}
+
+.link-container button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+}
+
+.modal-header .close-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: var(--input-bg);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin: -0.5rem -0.5rem -0.5rem 0;
+}
+
+.modal-header .close-button:hover {
+    opacity: 1;
+    background: var(--hover-bg);
+    transform: rotate(90deg);
+}
+
+/* Стилизация меню настроек */
+.settings-dropdown {
+    position: relative;
+}
+
+.settings-button {
+    background: var(--secondary-color);
+}
+
+.settings-button:hover {
+    background: var(--secondary-color-hover);
+}
+
+.settings-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background: var(--modal-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 0.8rem;
+    min-width: 220px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.settings-menu.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+.settings-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.settings-item span {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+/* Стили для снежинок */
+.snowflake {
+    position: fixed;
+    color: white;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: snowfall linear infinite;
+    z-index: 9999;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.snowflake:nth-child(2n) {
+    animation-duration: 3s;
+}
+
+.snowflake:nth-child(3n) {
+    animation-duration: 4s;
+}
+
+.snowflake:nth-child(4n) {
+    animation-duration: 5s;
+}
+
+.snowflake:nth-child(5n) {
+    animation-duration: 6s;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Анимация для снежинок */
+.snowflake {
+    font-size: 1.5em;
+}
+
+.snowflake:nth-child(2n) {
+    font-size: 1.2em;
+}
+
+.snowflake:nth-child(3n) {
+    font-size: 1.8em;
+}
+
+.snowflake:nth-child(4n) {
+    font-size: 1em;
+}
+
+.snowflake:nth-child(5n) {
+    font-size: 1.4em;
+}
+
+/* Стилизация переключателей */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #484a4d;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Стили для светлой темы */
+body.light-theme {
+    --bg-color: #f5f6f7;
+    --text-color: #333;
+    --border-color: #ddd;
+    --input-bg: #fff;
+    --card-bg: #fff;
+    --hover-bg: #eee;
+    --modal-bg: #fff;
+    --header-bg: #fff;
+}
+
+/* Стили для отключенных анимаций */
+body.no-animations *,
+body.no-animations *:before,
+body.no-animations *:after {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Анимация для кнопки настроек при открытом меню */
+.settings-button {
+    transform: none;
+}
+
+/* Анимация появления меню */
+@keyframes menuAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для уведомлений */
+@keyframes slideIn {
+    from {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+}
+
+.loading-modal {
+    text-align: center;
+    padding: 1rem;
+}
+
+.loading-modal h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.loading-modal .icon {
+    color: #3498db;
+    font-size: 1.2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--input-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30%;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(90deg, transparent, #3498db, transparent);
+    animation: progress 1.2s ease-in-out infinite;
+    border-radius: 4px;
+}
+
+.loading-status {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+}
+
+@keyframes progress {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+/* Медиа-запросы для адаптивности */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .header {
+        padding: 0.6rem;
+    }
+
+    .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .service-line {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+        padding: 0.5rem;
+    }
+    
+    .service-line:not(:has(.night-checkbox-wrapper)) {
+        grid-template-columns: 1fr;
+    }
+
+    .input-group {
+        justify-content: flex-start;
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem;
+    }
+    
+    .nav-button {
+        width: 100%;
+        justify-content: center;
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .hospital-section {
+        padding: 0.6rem;
+    }
+
+    /* Стили для модального окна на мобильных */
+    .modal-content {
+        width: 90%;
+        max-width: none;
+        margin: 0.5rem;
+    }
+
+    .modal-header {
+        padding: 0.8rem;
+    }
+
+    .modal-body {
+        padding: 0.8rem;
+    }
+
+    .link-container {
+        flex-direction: column;
+    }
+
+    .link-container input {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .link-container button {
+        width: 100%;
+    }
+
+    /* Стили для уведомлений на мобильных */
+    .notification {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        max-width: none;
+    }
+}
+
+/* Стили для очень маленьких экранов */
+@media (max-width: 380px) {
+    .header h1 {
+        font-size: 1.1rem;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
+    }
+
+    .hospital-section {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .bottom-sections {
+        grid-template-columns: 1fr;
+    }
+    
+    .reanimation-section, .instructor-section {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-line {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+    }
+    
+    .service-line:not(:has(.night-checkbox-wrapper)) {
+        grid-template-columns: 1fr;
+    }
+
+    .input-group {
+        justify-content: flex-start;
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .nav-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Стилизация карточек */
+.card {
+    background: linear-gradient(to right, rgba(35, 40, 46, 0.8), rgba(40, 45, 51, 0.8));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.card-header {
+    background: linear-gradient(to right, rgba(48, 105, 152, 0.7), rgba(48, 105, 152, 0.3));
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 12px 12px 0 0;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-row {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem;
+    margin: 0.4rem 0;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.card-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(3px);
+}
+
+.card-row .title {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.card-row .night-label {
+    font-size: 0.85rem;
+    color: #8b97a5;
+    margin: 0 0.8rem;
+    padding: 0.3rem 0.6rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.card-row .points {
+    font-size: 0.95rem;
+    color: #2ecc71;
+    font-weight: 500;
+    min-width: 70px;
+    text-align: right;
+    padding-left: 0.5rem;
+}
+
+.checkbox-wrapper {
+    margin: 0 0.8rem;
+}
+
+.checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox:checked {
+    background: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.total span {
+    font-size: 0.95rem;
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+/* Специальные стили для разных карточек */
+.card.els-hospital .card-header {
+    background: linear-gradient(to right, rgba(41, 128, 185, 0.7), rgba(41, 128, 185, 0.3));
+}
+
+.card.sandy-shores .card-header {
+    background: linear-gradient(to right, rgba(230, 126, 34, 0.7), rgba(230, 126, 34, 0.3));
+}
+
+.card.paleto-bay .card-header {
+    background: linear-gradient(to right, rgba(155, 89, 182, 0.7), rgba(155, 89, 182, 0.3));
+}
+
+.card.reanimation .card-header {
+    background: linear-gradient(to right, rgba(231, 76, 60, 0.7), rgba(231, 76, 60, 0.3));
+}
+
+.card.instructors .card-header {
+    background: linear-gradient(to right, rgba(46, 204, 113, 0.7), rgba(46, 204, 113, 0.3));
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card {
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-header {
+    padding: 0.5rem;
+    margin: -0.8rem -0.8rem 0.8rem -0.8rem;
+    font-size: 1rem;
+}
+
+.card-row {
+    padding: 0.4rem;
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.card-row .title {
+    font-size: 0.9rem;
+}
+
+.card-row .night-label {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+    margin: 0 0.5rem;
+}
+
+.card-row .points {
+    font-size: 0.9rem;
+    min-width: 60px;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox:checked::after {
+    font-size: 12px;
+}
+
+.total {
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 1200px) {
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .card.reanimation,
+    .card.instructors {
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .card.reanimation .card-header,
+    .card.instructors .card-header {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Общий итог */
+.grand-total {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(to right, rgba(46, 204, 113, 0.2), rgba(46, 204, 113, 0.1));
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: #2ecc71;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.grand-total span {
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+/* Стили для нижних секций (Реанимация и Инструкторы) */
+.reanimation-section,
+.instructor-section {
+    background: linear-gradient(to bottom right, #242526, #2d2e30);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    width: 100%;
+}
+
+.reanimation-section h3,
+.instructor-section h3 {
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.8rem;
+    border-radius: 12px 12px 0 0;
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    border: none;
+    background: none;
+}
+
+.reanimation-section h3 {
+    background: linear-gradient(to right, rgba(231, 76, 60, 0.7), rgba(231, 76, 60, 0.3));
+}
+
+.instructor-section h3 {
+    background: linear-gradient(to right, rgba(46, 204, 113, 0.7), rgba(46, 204, 113, 0.3));
+}
+
+/* Анимации для всех элементов */
+.service-line {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.service-line:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+}
+
+/* Анимация для инпутов */
+.input-group input {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-group input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.15);
+}
+
+/* Анимация для итоговых значений */
+.total span,
+.grand-total span {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.total span[data-changed="true"],
+.grand-total span[data-changed="true"] {
+    animation: pulse 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: var(--secondary-color);
+}
+
+/* Анимация для заголовков секций */
+.hospital-section h3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.hospital-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+/* Анимации для чекбоксов ночной смены */
+.night-checkbox-wrapper:hover {
+    transform: translateY(-2px);
+    background: rgba(46, 204, 113, 0.1);
+}
+
+.night-checkbox-wrapper input[type="checkbox"]:checked + label::before {
+    animation: checkmark 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Анимация для всей секции больницы */
+.hospital-section {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: sectionAppear 0.5s ease forwards;
+}
+
+.hospital-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes sectionAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для точек баллов */
+.points {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.points[data-changed="true"] {
+    animation: pointsUpdate 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: var(--secondary-color);
+}
+
+@keyframes pointsUpdate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Стили для уведомлений */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+    transform: translateX(120%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 350px;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification .icon {
+    font-size: 1.2rem;
+}
+
+.notification.success .icon {
+    color: #2ecc71;
+}
+
+.notification.error .icon {
+    color: #e74c3c;
+}
+
+.notification.info .icon {
+    color: #3498db;
+}
+
+.notification .message {
+    margin: 0;
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.notification .close {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    opacity: 0.5;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+    transition: opacity 0.2s ease;
+}
+
+.notification .close:hover {
+    opacity: 1;
+}

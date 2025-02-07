@@ -1,0 +1,25 @@
+<script>
+    // Логируем посещение страницы
+    async function logPageVisit() {
+        try {
+            const formData = new FormData();
+            formData.append('page', 'calculator_had');
+
+            const response = await fetch('log_visit.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                console.error('Ошибка при логировании посещения');
+            }
+        } catch (error) {
+            console.error('Ошибка:', error);
+        }
+    }
+
+    // Вызываем функцию при загрузке страницы
+    document.addEventListener('DOMContentLoaded', logPageVisit);
+
+    // Существующий код калькулятора...
+</script> 

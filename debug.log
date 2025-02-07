@@ -1,0 +1,336 @@
+[07-Feb-2025 16:32:24 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 16:32:24 Europe/Berlin] Время: 2025-02-07 16:32:24
+[07-Feb-2025 16:32:24 Europe/Berlin] IP: ::1
+[07-Feb-2025 16:32:24 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 16:32:24 Europe/Berlin] Page: index
+[07-Feb-2025 16:32:24 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 16:32:24 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 16:32:24 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 16:32:24 Europe/Berlin] Недавних посещений найдено: 0
+[07-Feb-2025 16:32:24 Europe/Berlin] Успешно записано новое посещение
+[07-Feb-2025 16:32:24 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 16:32:30 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 16:32:30 Europe/Berlin] Время: 2025-02-07 16:32:30
+[07-Feb-2025 16:32:30 Europe/Berlin] IP: ::1
+[07-Feb-2025 16:32:30 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 16:32:30 Europe/Berlin] Page: index
+[07-Feb-2025 16:32:30 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 16:32:30 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 16:32:30 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 16:32:30 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 16:32:30 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 16:32:30 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 16:32:34 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 16:32:34 Europe/Berlin] Время: 2025-02-07 16:32:34
+[07-Feb-2025 16:32:34 Europe/Berlin] IP: ::1
+[07-Feb-2025 16:32:34 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 16:32:34 Europe/Berlin] Page: index
+[07-Feb-2025 16:32:34 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 16:32:34 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 16:32:34 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 16:32:34 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 16:32:34 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 16:32:34 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 16:36:26 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 16:36:26 Europe/Berlin] Время: 2025-02-07 16:36:26
+[07-Feb-2025 16:36:26 Europe/Berlin] IP: ::1
+[07-Feb-2025 16:36:26 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 16:36:26 Europe/Berlin] Page: index
+[07-Feb-2025 16:36:26 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 16:36:26 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 16:36:26 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 16:36:26 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 16:36:26 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 16:36:26 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 16:40:23 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 16:40:23 Europe/Berlin] Время: 2025-02-07 16:40:23
+[07-Feb-2025 16:40:23 Europe/Berlin] IP: ::1
+[07-Feb-2025 16:40:23 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 16:40:23 Europe/Berlin] Page: index
+[07-Feb-2025 16:40:23 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 16:40:23 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 16:40:23 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 16:40:23 Europe/Berlin] Недавних посещений найдено: 0
+[07-Feb-2025 16:40:23 Europe/Berlin] Успешно записано новое посещение
+[07-Feb-2025 16:40:23 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 16:51:14 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 16:51:14 Europe/Berlin] Время: 2025-02-07 16:51:14
+[07-Feb-2025 16:51:14 Europe/Berlin] IP: ::1
+[07-Feb-2025 16:51:14 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 16:51:14 Europe/Berlin] Page: index
+[07-Feb-2025 16:51:14 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 16:51:14 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 16:51:14 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 16:51:14 Europe/Berlin] Недавних посещений найдено: 0
+[07-Feb-2025 16:51:14 Europe/Berlin] Успешно записано новое посещение
+[07-Feb-2025 16:51:14 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 16:53:54 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 16:53:54 Europe/Berlin] Время: 2025-02-07 16:53:54
+[07-Feb-2025 16:53:54 Europe/Berlin] IP: ::1
+[07-Feb-2025 16:53:54 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 16:53:54 Europe/Berlin] Page: index
+[07-Feb-2025 16:53:54 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 16:53:54 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 16:53:54 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 16:53:54 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 16:53:54 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 16:53:54 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 17:51:53 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 17:51:53 Europe/Berlin] Время: 2025-02-07 17:51:53
+[07-Feb-2025 17:51:53 Europe/Berlin] IP: ::1
+[07-Feb-2025 17:51:53 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 17:51:53 Europe/Berlin] Page: index
+[07-Feb-2025 17:51:53 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 17:51:53 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 17:51:53 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 17:51:53 Europe/Berlin] Недавних посещений найдено: 0
+[07-Feb-2025 17:51:53 Europe/Berlin] Успешно записано новое посещение
+[07-Feb-2025 17:51:53 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 18:04:02 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 18:04:02 Europe/Berlin] Время: 2025-02-07 18:04:02
+[07-Feb-2025 18:04:02 Europe/Berlin] IP: ::1
+[07-Feb-2025 18:04:02 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 18:04:02 Europe/Berlin] Page: index
+[07-Feb-2025 18:04:02 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 18:04:02 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 18:04:02 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 18:04:02 Europe/Berlin] Недавних посещений найдено: 0
+[07-Feb-2025 18:04:02 Europe/Berlin] Успешно записано новое посещение
+[07-Feb-2025 18:04:02 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 18:05:07 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 18:05:07 Europe/Berlin] Время: 2025-02-07 18:05:07
+[07-Feb-2025 18:05:07 Europe/Berlin] IP: ::1
+[07-Feb-2025 18:05:07 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 18:05:07 Europe/Berlin] Page: index
+[07-Feb-2025 18:05:07 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 18:05:07 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 18:05:07 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 18:05:07 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 18:05:07 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 18:05:07 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 18:25:25 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 18:25:25 Europe/Berlin] Время: 2025-02-07 18:25:25
+[07-Feb-2025 18:25:25 Europe/Berlin] IP: ::1
+[07-Feb-2025 18:25:25 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 18:25:25 Europe/Berlin] Page: index
+[07-Feb-2025 18:25:25 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 18:25:25 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 18:25:25 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 18:25:25 Europe/Berlin] Недавних посещений найдено: 0
+[07-Feb-2025 18:25:25 Europe/Berlin] Успешно записано новое посещение
+[07-Feb-2025 18:25:25 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 18:25:26 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 18:25:26 Europe/Berlin] Время: 2025-02-07 18:25:26
+[07-Feb-2025 18:25:26 Europe/Berlin] IP: ::1
+[07-Feb-2025 18:25:26 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 18:25:26 Europe/Berlin] Page: index
+[07-Feb-2025 18:25:26 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 18:25:26 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 18:25:26 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 18:25:26 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 18:25:26 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 18:25:26 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 19:01:13 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 19:01:13 Europe/Berlin] Время: 2025-02-07 19:01:13
+[07-Feb-2025 19:01:13 Europe/Berlin] IP: ::1
+[07-Feb-2025 19:01:13 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 19:01:13 Europe/Berlin] Page: index
+[07-Feb-2025 19:01:13 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 19:01:13 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 19:01:13 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 19:01:13 Europe/Berlin] Недавних посещений найдено: 0
+[07-Feb-2025 19:01:13 Europe/Berlin] Успешно записано новое посещение
+[07-Feb-2025 19:01:13 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 19:01:18 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 19:01:18 Europe/Berlin] Время: 2025-02-07 19:01:18
+[07-Feb-2025 19:01:18 Europe/Berlin] IP: ::1
+[07-Feb-2025 19:01:18 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 19:01:18 Europe/Berlin] Page: index
+[07-Feb-2025 19:01:18 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 19:01:18 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 19:01:18 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 19:01:18 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 19:01:18 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 19:01:18 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 19:01:21 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 19:01:21 Europe/Berlin] Время: 2025-02-07 19:01:21
+[07-Feb-2025 19:01:21 Europe/Berlin] IP: ::1
+[07-Feb-2025 19:01:21 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 19:01:21 Europe/Berlin] Page: index
+[07-Feb-2025 19:01:21 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 19:01:21 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 19:01:21 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 19:01:21 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 19:01:21 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 19:01:21 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 19:01:25 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 19:01:25 Europe/Berlin] Время: 2025-02-07 19:01:25
+[07-Feb-2025 19:01:25 Europe/Berlin] IP: ::1
+[07-Feb-2025 19:01:25 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 19:01:25 Europe/Berlin] Page: index
+[07-Feb-2025 19:01:25 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 19:01:25 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 19:01:25 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 19:01:25 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 19:01:25 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 19:01:25 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 19:03:37 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 19:03:37 Europe/Berlin] Время: 2025-02-07 19:03:37
+[07-Feb-2025 19:03:37 Europe/Berlin] IP: ::1
+[07-Feb-2025 19:03:37 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 19:03:37 Europe/Berlin] Page: index
+[07-Feb-2025 19:03:37 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 19:03:37 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 19:03:37 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 19:03:37 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 19:03:37 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 19:03:37 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 19:05:43 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 19:05:43 Europe/Berlin] Время: 2025-02-07 19:05:43
+[07-Feb-2025 19:05:43 Europe/Berlin] IP: ::1
+[07-Feb-2025 19:05:43 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 19:05:43 Europe/Berlin] Page: index
+[07-Feb-2025 19:05:43 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 19:05:43 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 19:05:43 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 19:05:43 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 19:05:43 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 19:05:43 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 19:08:12 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 19:08:12 Europe/Berlin] Время: 2025-02-07 19:08:12
+[07-Feb-2025 19:08:12 Europe/Berlin] IP: ::1
+[07-Feb-2025 19:08:12 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 19:08:12 Europe/Berlin] Page: index
+[07-Feb-2025 19:08:12 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 19:08:12 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 19:08:12 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 19:08:12 Europe/Berlin] Недавних посещений найдено: 0
+[07-Feb-2025 19:08:12 Europe/Berlin] Успешно записано новое посещение
+[07-Feb-2025 19:08:12 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 19:08:25 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 19:08:25 Europe/Berlin] Время: 2025-02-07 19:08:25
+[07-Feb-2025 19:08:25 Europe/Berlin] IP: ::1
+[07-Feb-2025 19:08:25 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 19:08:25 Europe/Berlin] Page: index
+[07-Feb-2025 19:08:25 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 19:08:25 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 19:08:25 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 19:08:25 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 19:08:25 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 19:08:25 Europe/Berlin] === Конец записи посещения ===
+
+[07-Feb-2025 19:10:13 Europe/Berlin] === Новая попытка записи посещения ===
+[07-Feb-2025 19:10:13 Europe/Berlin] Время: 2025-02-07 19:10:13
+[07-Feb-2025 19:10:13 Europe/Berlin] IP: ::1
+[07-Feb-2025 19:10:13 Europe/Berlin] User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0 (Edition Yx GX 03)
+[07-Feb-2025 19:10:13 Europe/Berlin] Page: index
+[07-Feb-2025 19:10:13 Europe/Berlin] POST данные: Array
+(
+    [page] => index
+)
+
+[07-Feb-2025 19:10:13 Europe/Berlin] Соединение с БД установлено
+[07-Feb-2025 19:10:13 Europe/Berlin] Таблица site_visits существует: Да
+[07-Feb-2025 19:10:13 Europe/Berlin] Недавних посещений найдено: 1
+[07-Feb-2025 19:10:13 Europe/Berlin] Посещение уже было зарегистрировано
+[07-Feb-2025 19:10:13 Europe/Berlin] === Конец записи посещения ===
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькуляторы EMS</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+        .tools-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            padding: 20px;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        .tool-card {
+            min-width: 280px;
+            max-width: 280px;
+        }
+        @media (max-width: 1200px) {
+            .tools-grid {
+                justify-content: flex-start;
+                padding: 20px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Назад
+    </a>
+
+    <div class="page-container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Калькуляторы баллов EMS</h1>
+                <p class="subtitle">Выберите отдел для расчета</p>
+            </div>
+        </div>
+
+        <div class="tools-grid">
+            <a href="calculator-Ems-PM.html" class="tool-card calculator">
+                <div class="tool-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Калькулятор PM</h3>
+                <p>Расчет баллов за смену для сотрудников отдела PM</p>
+                <div class="card-footer">
+                    <span class="status active">
+                        <i class="fas fa-circle"></i> Активен
+                    </span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="calculator-Ems-DI.html" class="tool-card calculator">
+                <div class="tool-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Калькулятор DI</h3>
+                <p>Расчет баллов за смену для сотрудников отдела DI</p>
+                <div class="card-footer">
+                    <span class="status active">
+                        <i class="fas fa-circle"></i> Активен
+                    </span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="calculator-Ems-PSID.html" class="tool-card calculator">
+                <div class="tool-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Калькулятор PSID</h3>
+                <p>Расчет баллов за смену для сотрудников отдела PSID</p>
+                <div class="card-footer">
+                    <span class="status active">
+                        <i class="fas fa-circle"></i> Активен
+                    </span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="calculator-Ems-HAD.html" class="tool-card calculator">
+                <div class="tool-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Калькулятор HAD</h3>
+                <p>Расчет баллов за смену для сотрудников отдела HAD</p>
+                <div class="card-footer">
+                    <span class="status active">
+                        <i class="fas fa-circle"></i> Активен
+                    </span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <p>Разработано для EMS</p>
+            <div class="social-links">
+                <a href="https://discord.com/users/gofman3#4086" target="_blank" class="social-link">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html> 

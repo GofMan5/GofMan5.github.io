@@ -1,0 +1,77 @@
+# Принудительная обработка PHP
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+    ForceType application/x-httpd-php
+</FilesMatch>
+
+# Базовые настройки PHP
+php_flag display_errors On
+php_value error_reporting E_ALL
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+php_value max_input_time 300
+
+# Базовые настройки Apache
+Options +FollowSymLinks -MultiViews
+DirectoryIndex index.html index.php
+
+# Установка кодировки
+AddDefaultCharset UTF-8
+
+# Обработка PHP файлов
+AddType application/x-httpd-php .php
+AddHandler application/x-httpd-php .php
+
+# Включаем mod_rewrite
+RewriteEngine On
+RewriteBase /ems-site/
+
+# Защита конфигурационных файлов
+<Files ~ "^(config|auth)\.(php|ini)$">
+    Order deny,allow
+    Deny from all
+</Files>
+
+# Базовые заголовки безопасности
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Разрешаем прямой доступ к PHP файлам
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} \.php$
+RewriteRule ^ - [L]
+
+# Разрешаем доступ к директориям
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Перенаправляем запросы к API
+RewriteRule ^api/(.*)$ api/$1.php [L,QSA]
+
+# Для остальных запросов показываем index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+
+# Обработка ошибок
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+ErrorDocument 500 /500.html
+
+# Включаем перенаправление на HTTPS (раскомментируйте, если есть SSL)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Настройки CORS
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type"
+Header set Access-Control-Max-Age "3600"
+
+# Обработка OPTIONS запросов
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L] 
