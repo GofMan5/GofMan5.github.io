@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор баллов EMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Калькулятор баллов EMS</h1>
+            <p class="subtitle">Создано для EMS для лидера фракции - Anna Serenity</p>
+            <div class="header-buttons">
+                <a href="/" class="button home-button">
+                    <i class="fas fa-home"></i>
+                    <span>Главная</span>
+                </a>
+                <button class="button screenshot-button">
+                    <i class="fas fa-camera"></i>
+                    <span>Сделать скриншот</span>
+                </button>
+                <div class="settings-dropdown">
+                    <button class="button settings-button">
+                        <i class="fas fa-cog"></i>
+                        <span>Настройки</span>
+                    </button>
+                    <div class="settings-menu">
+                        <div class="settings-item">
+                            <span>Эффект снежинок</span>
+                            <label class="switch">
+                                <input type="checkbox" id="snowflakes-toggle" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="settings-item">
+                            <span>Тёмная тема</span>
+                            <label class="switch">
+                                <input type="checkbox" id="dark-theme-toggle" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="settings-item">
+                            <span>Анимации</span>
+                            <label class="switch">
+                                <input type="checkbox" id="animations-toggle" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="hospitals-container">
+                <!-- ELS Hospital -->
+                <div class="hospital-section els-hospital">
+                    <h3>ELS Hospital</h3>
+                    <div class="service-line">
+                        <label>Выдача таблеток (1 балл)</label>
+                        <div class="night-checkbox-wrapper">
+                            <input type="checkbox" class="night-shift" name="night_shift_els_1">
+                            <label>Ночная</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_els_1">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="service-line">
+                        <label>Вакцинация (2 балла)</label>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_els_2">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="service-line">
+                        <label>Мед. справка (3 балла)</label>
+                        <div class="night-checkbox-wrapper">
+                            <input type="checkbox" class="night-shift" name="night_shift_els_3">
+                            <label>Ночная</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_els_3">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="total">
+                        Итого: <span>0</span>
+                    </div>
+                </div>
+
+                <!-- Sandy Shores -->
+                <div class="hospital-section sandy-shores">
+                    <h3>Sandy Shores</h3>
+                    <div class="service-line">
+                        <label>Выдача таблеток (2 балла)</label>
+                        <div class="night-checkbox-wrapper">
+                            <input type="checkbox" class="night-shift" name="night_shift_ss_1">
+                            <label>Ночная</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_ss_1">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="service-line">
+                        <label>Вакцинация (3 балла)</label>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_ss_2">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="service-line">
+                        <label>Мед. справка (4 балла)</label>
+                        <div class="night-checkbox-wrapper">
+                            <input type="checkbox" class="night-shift" name="night_shift_ss_3">
+                            <label>Ночная</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_ss_3">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="total">
+                        Итого: <span>0</span>
+                    </div>
+                </div>
+
+                <!-- Paleto Bay -->
+                <div class="hospital-section paleto-bay">
+                    <h3>Paleto Bay</h3>
+                    <div class="service-line">
+                        <label>Выдача таблеток (3 балла)</label>
+                        <div class="night-checkbox-wrapper">
+                            <input type="checkbox" class="night-shift" name="night_shift_pb_1">
+                            <label>Ночная</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_pb_1">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="service-line">
+                        <label>Вакцинация (4 балла)</label>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_pb_2">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="service-line">
+                        <label>Мед. справка (5 баллов)</label>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_pb_3">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="total">
+                        Итого: <span>0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-sections">
+                <!-- Реанимация -->
+                <div class="hospital-section reanimation-section">
+                    <h3>Реанимация</h3>
+                    <div class="service-line">
+                        <label>Оказание ПМП (3 баллов)</label>
+                        <div class="night-checkbox-wrapper">
+                            <input type="checkbox" class="night-shift" name="night_shift_r_1">
+                            <label>Ночная</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_r_1">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="service-line">
+                        <label>Откаченный вызов (1 балл)</label>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_r_2">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="total">
+                        Итого: <span>0</span>
+                    </div>
+                </div>
+
+                <!-- Инструкторы -->
+                <div class="hospital-section instructor-section">
+                    <h3>Для Инструкторов</h3>
+                    <div class="service-line">
+                        <label>Проверка отчёта (10 баллов)</label>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_i_1">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="service-line">
+                        <label>Проведение экзамена (5 баллов)</label>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_i_2">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="service-line">
+                        <label>Проверка больниц (5 баллов)</label>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_i_3">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="service-line">
+                        <label>Помощь в проведении брифинга (15 баллов)</label>
+                        <div class="input-group">
+                            <input type="number" min="0" class="service-input" name="service_i_4">
+                            <span class="points">0 баллов</span>
+                        </div>
+                    </div>
+                    <div class="total">
+                        Итого: <span>0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grand-total">
+            Общее количество баллов: <span>0</span>
+        </div>
+
+        <div class="copyright">
+            2025 EMS Points Calculator • Разработано <a href="https://discord.com/users/gofman3#4086" target="_blank">gofman3#4086</a>
+        </div>
+    </div>
+
+    <!-- Решение: объединяем модальные окна -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="screenshotModal">
+            <div class="modal-header">
+                <div class="modal-title">Скриншот калькулятора</div>
+                <button class="modal-close" onclick="closeModal(this)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="screenshot-result hidden">
+                    <img id="screenshotImage" alt="Скриншот калькулятора">
+                    <div class="link-container">
+                        <input type="text" id="imageLink" readonly>
+                        <button onclick="copyImageUrl()">Копировать ссылку</button>
+                    </div>
+                </div>
+                <div class="loading-content hidden">
+                    <div class="loading-spinner"></div>
+                    <p>Создание скриншота...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Добавляем модальное окно для загрузки -->
+    <div class="modal" id="uploadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-cloud-upload-alt icon"></i>
+                    Загрузка скриншота
+                </h3>
+                <button class="close-button" onclick="window.closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="loading-modal">
+                <div class="progress-bar"></div>
+                <div class="loading-status">Подготовка к загрузке...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
